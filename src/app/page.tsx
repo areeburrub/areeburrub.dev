@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main className="flex text-xl min-h-screen flex-col items-center gap-10 pb-10">
 
-      <div className={"container grid grid-cols-12 w-full h-[60vh] mt-10"}>
+      <div className={"container grid grid-cols-12 w-full  mt-10 gap-5"}>
         <div className={"col-span-12 md:col-span-6 w-full flex flex-col items-start justify-center gap-2"}>
           <h3 className={roboto.className + " text-purple text-2xl"}>Hi I am Areeb ur Rub</h3>
           <h1 className={'text-5xl font-semibold leading-tight'}>
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={'w-full h-[14rem] mt-16 overflow-hidden'}>
+      <div className={'w-full h-[14rem] mt-2 md:mt-16 overflow-hidden'}>
       <div className={'w-full flex flex-col justify-center bg-violet mt-16'}>
         <div className={'w-full bg-violet-dark py-5 border-b-2 border-t-2 border-sky2 -rotate-3'}>
           <Marquee>
@@ -107,7 +107,7 @@ export default function Home() {
       </div>
       </div>
 
-      <div className={"container grid grid-cols-12 w-full h-[60vh] mt-10"}>
+      <div className={"container grid grid-cols-12 w-full h-[60vh] md:mt-10"}>
         <div className={"col-span-12 md:col-span-6 w-full flex flex-col items-start justify-center gap-2"}>
           <h3 className={roboto.className + " text-purple text-2xl"}>About Me</h3>
           <h1 className={'text-5xl font-semibold leading-tight'}>
