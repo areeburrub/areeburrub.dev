@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Roboto_Mono } from 'next/font/google'
 import {
   RiArrowRightSLine, RiFile2Fill,
   RiFolderFill,
@@ -10,6 +9,7 @@ import {
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
+import { Roboto_Mono } from 'next/font/google'
 const roboto = Roboto_Mono({
   weight: ['400'],
   subsets: ['greek'],
@@ -22,6 +22,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import {cn} from "@/lib/utils";
+import ProjectCard from "@/components/project-card";
 
 
 
@@ -107,7 +108,7 @@ export default function Home() {
       </div>
       </div>
 
-      <div className={"container grid grid-cols-12 w-full h-[60vh] md:mt-10"}>
+      <div className={"container grid grid-cols-12 w-full md:mt-10"}>
         <div className={"col-span-12 md:col-span-6 w-full flex flex-col items-start justify-center gap-2"}>
           <h3 className={roboto.className + " text-purple text-2xl"}>About Me</h3>
           <h1 className={'text-5xl font-semibold leading-tight'}>
@@ -129,7 +130,7 @@ export default function Home() {
 
               </AccordionTrigger>
               <AccordionContent>
-                <div className={'w-full grid grid-cols-2 gap-x-10 gap-y-4 text-xl mx-20 my-2'}>
+                <div className={'w-full grid grid-cols-2 gap-x-2 md:gap-x-10 gap-y-4 text-xl mx-5 md:mx-20 my-2'}>
                   <span className={'col-span-1 flex flex-row items-center gap-2'}>
                     <RiFile2Fill className={'text-purple text-2xl'}/> Python
                   </span>
@@ -158,7 +159,7 @@ export default function Home() {
 
               </AccordionTrigger>
               <AccordionContent>
-                <div className={'w-full grid grid-cols-2 gap-x-10 gap-y-4 text-xl mx-20 my-2'}>
+                <div className={'w-full grid grid-cols-2 gap-x-2 md:gap-x-10 gap-y-4 text-xl mx-5 md:mx-20 my-2'}>
                   <span className={'col-span-1 flex flex-row items-center gap-2'}>
                     <RiFile2Fill className={'text-purple text-2xl'}/> NextJs
                   </span>
@@ -184,7 +185,7 @@ export default function Home() {
 
               </AccordionTrigger>
               <AccordionContent>
-                <div className={'w-full grid grid-cols-2 gap-x-10 gap-y-4 text-xl mx-20 my-2'}>
+                <div className={'w-full grid grid-cols-2 gap-x-2 md:gap-x-10 gap-y-4 text-xl mx-5 md:mx-20 my-2'}>
                   <span className={'col-span-1 flex flex-row items-center gap-2'}>
                     <RiFile2Fill className={'text-purple text-2xl'}/> MongoDB
                   </span>
@@ -201,7 +202,7 @@ export default function Home() {
                     <RiFile2Fill className={'text-purple text-2xl'}/> MySQL
                   </span>
                   <span className={'col-span-1 flex flex-row items-center gap-2'}>
-                    <RiFile2Fill className={'text-purple text-2xl'}/> Realtime Database
+                    <RiFile2Fill className={'text-purple text-2xl'}/> Realtime DB
                   </span>
                 </div>
               </AccordionContent>
@@ -216,7 +217,7 @@ export default function Home() {
 
               </AccordionTrigger>
               <AccordionContent>
-                <div className={'w-full grid grid-cols-2 gap-x-10 gap-y-4 text-xl mx-20 my-2'}>
+                <div className={'w-full grid grid-cols-2 gap-x-2 md:gap-x-10 gap-y-4 text-xl mx-5 md:mx-20 my-2'}>
                   <span className={'col-span-1 flex flex-row items-center gap-2'}>
                     <RiFile2Fill className={'text-purple text-2xl'}/> Figma
                   </span>
@@ -238,6 +239,74 @@ export default function Home() {
           </Accordion>
 
         </div>
+      </div>
+
+      {/*
+        Projects Section Start Here
+      */}
+
+      <Marquee>
+        <div className={"w-full flex-row flex justify-evenly items-center gap-8 px-2.5 mt-20 mb-8"}>
+        <span className={'text-5xl font-semibold leading-tight uppercase'}>
+          Latest&nbsp;Work
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase text-fill-transparent text-stroke-purple text-stroke-2'}>
+          projects
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase'}>
+          Latest&nbsp;Work
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase text-fill-transparent text-stroke-purple text-stroke-2'}>
+          projects
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase'}>
+          Latest&nbsp;Work
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase text-fill-transparent text-stroke-purple text-stroke-2'}>
+          projects
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase'}>
+          Latest&nbsp;Work
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase text-fill-transparent text-stroke-purple text-stroke-2'}>
+          projects
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase'}>
+          Latest&nbsp;Work
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase text-fill-transparent text-stroke-purple text-stroke-2'}>
+          projects
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase'}>
+          Latest&nbsp;Work
+        </span>
+        <span className={'text-5xl font-semibold leading-tight uppercase text-fill-transparent text-stroke-purple text-stroke-2'}>
+          projects
+        </span>
+      </div>
+      </Marquee>
+      <div className={'container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full'}>
+          <ProjectCard project={{
+            title: "When Where What",
+            description: "When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple and easy to use web app that allows you to create events and share them with your friends and family.",
+            image: "/project/wh3-cover-img.jpg",
+            url: "https://wh3.link/",
+            tags: ["Tailwind", "Next Js", "Mongo DB"]
+          }}/>
+          <ProjectCard project={{
+            title: "When Where What",
+            description: "When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple and easy to use web app that allows you to create events and share them with your friends and family.",
+            image: "/project/wh3-cover-img.jpg",
+            url: "https://wh3.link/",
+            tags: ["Tailwind", "Next Js", "Mongo DB"]
+          }}/>
+          <ProjectCard project={{
+            title: "When Where What",
+            description: "When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple and easy to use web app that allows you to create events and share them with your friends and family.",
+            image: "/project/wh3-cover-img.jpg",
+            url: "https://wh3.link/",
+            tags: ["Tailwind", "Next Js", "Mongo DB"]
+          }}/>
       </div>
 
     </main>
