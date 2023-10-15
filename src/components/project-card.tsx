@@ -34,7 +34,7 @@ const ProjectCard = ({project}:ProjectCardProps) => {
           <Image
             height={800}
             width={1000}
-            className={'w-full h-80 object-cover rounded-lg'}
+            className={'w-full h-80 object-cover rounded-lg bg-violet-300'}
             src={project.image}
             alt={project.title}/>
         </a>

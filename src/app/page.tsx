@@ -6,6 +6,9 @@ import {
   RiLinkedinFill,
   RiTwitterFill
 } from "react-icons/ri";
+import {
+  HiDocumentDownload
+} from "react-icons/hi"
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
@@ -23,6 +26,7 @@ import {
 } from "@/components/ui/accordion"
 import {cn} from "@/lib/utils";
 import ProjectCard from "@/components/project-card";
+import * as React from "react";
 
 
 
@@ -30,17 +34,26 @@ export default function Home() {
   return (
     <main className="flex text-xl min-h-screen flex-col items-center gap-10 pb-10">
 
-      <div className={"container grid grid-cols-12 w-full  mt-10 gap-5"}>
+      <div className={"container grid grid-cols-12 w-full  lg:mt-10 gap-5"}>
+        <div className={"col-span-12 md:col-span-6 w-full flex flex-col items-center justify-center"}>
+          <div className={"w-full h-full bg-opacity-50 "}>
+            <img alt={"Areeb ur Rub"} src={'/hero-2.JPG'} className={'bg-gray-800 rounded-lg border-2 border-purple w-auto max-h-[70vh] mx-auto object-cover'}/>
+          </div>
+        </div>
         <div className={"col-span-12 md:col-span-6 w-full flex flex-col items-start justify-center gap-2"}>
           <h3 className={roboto.className + " text-purple text-2xl"}>Hi I am Areeb ur Rub</h3>
-          <h1 className={'text-5xl font-semibold leading-tight'}>
+          <h1 className={'text-3xl md:text-5xl font-semibold leading-tight'}>
             Full Stack Developer and <br/>
             Graphic Designer
           </h1>
-          <p className={"text-md font-normal"}>
+          <p className={"text-md opacity-70 font-normal"}>
             Passionate web developer and graphic designer learning web3 with Solidity. Passionate about creating intuitive and user-friendly experiences and bringing visual designs to life.
           </p>
-          <div className={"flex-row gap-2 text-3xl mt-6 flex"}>
+          <div className={"flex-row items-center gap-4 text-3xl mt-6 flex"}>
+            <a href={"/Resume - Areeb ur Rub.pdf"} target={"__blank"} className={'flex flex-row items-center gap-2 text-lg mr-2 px-5 py-2 bg-violet-dark rounded-full border-2 border-sky text-sky hover:border-transparent hover:bg-sky hover:text-violet'}>
+              <HiDocumentDownload/>
+              Download CV
+            </a>
             <Link href={"#"}>
               <RiGithubFill/>
             </Link>
@@ -52,11 +65,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className={"col-span-12 md:col-span-6 w-full flex flex-col items-center justify-center"}>
-          <div className={"bg-gray-800 w-full h-full bg-opacity-50 "}>
-            <img alt={"Areeb ur Rub"} src={'/hero.JPEG'} className={' w-full max-h-[60vh] object-cover'}/>
-          </div>
-        </div>
+
       </div>
 
       <div className={'w-full h-[14rem] mt-2 md:mt-16 overflow-hidden'}>
@@ -287,9 +296,9 @@ export default function Home() {
       </Marquee>
       <div className={'container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full'}>
           <ProjectCard project={{
-            title: "When Where What",
-            description: "When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple and easy to use web app that allows you to create events and share them with your friends and family.",
-            image: "/project/wh3-cover-img.jpg",
+            title: "AI JSON Generator",
+            description: "AI JSON Generator is a web app that allows you to generate JSON data for your projects.It uses OpenAI's GPT-3 to generate JSON data based on your inputs.",
+            image: "/project/ai-json-generator.png",
             url: "https://wh3.link/",
             tags: ["Tailwind", "Next Js", "Mongo DB"]
           }}/>
@@ -301,11 +310,11 @@ export default function Home() {
             tags: ["Tailwind", "Next Js", "Mongo DB"]
           }}/>
           <ProjectCard project={{
-            title: "When Where What",
-            description: "When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple and easy to use web app that allows you to create events and share them with your friends and family.",
-            image: "/project/wh3-cover-img.jpg",
+            title: "Live Chat Extension",
+            description: "Live Chat is a Chrome Extension that enable a user to chat with other people on same website it uses Chrome Extension API to check the URL of the website and matches them with each other.",
+            image: "/project/live-ext.webp",
             url: "https://wh3.link/",
-            tags: ["Tailwind", "Next Js", "Mongo DB"]
+            tags: ["Firebase", "Chrome Extension", "Figma"]
           }}/>
       </div>
 

@@ -5,8 +5,7 @@ export function Navbar() {
   return (
     <div className={"container flex flex-row justify-between py-8"}>
       <div className={"flex flex-row items-end"} aria-details={"Logo"}>
-        <span className={"font-extrabold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple to-sky"}>Areeb</span>
-        <span className={"font-regular text-xl"}>.dev</span>
+        <span className={"font-extrabold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple to-sky"}>Areeb ur Rub</span>
       </div>
 
       <div className={"hidden md:flex flex-row items-center gap-10"}>
