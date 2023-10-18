@@ -1,6 +1,7 @@
 import './globals.css'
 import { Noto_Sans } from 'next/font/google'
 import {Navbar} from "@/components/navbar";
+import {Footer} from "@/components/footer";
 
 const noto = Noto_Sans({
   weight: ['400','600','800'],
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={noto.className+" bg-violet-darker text-white"}>
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   )
