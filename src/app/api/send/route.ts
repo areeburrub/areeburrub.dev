@@ -2,8 +2,9 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { ContactEmail } from "@/components/email/ContactEmail";
 import siteConfig from "@/site.config";
+import env from "@/env.mjs";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -13,9 +14,8 @@ export async function POST(req: Request) {
     const url = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
     const result = await fetch(url, {
       method: "POST",
-      // @ts-ignore
       body: `secret=${encodeURIComponent(
-        process.env.SITE_SECRET,
+        env.SITE_SECRET,
       )}&response=${encodeURIComponent(captcha)}`,
       headers: {
         "content-type": "application/x-www-form-urlencoded",
