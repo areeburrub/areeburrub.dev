@@ -1,100 +1,233 @@
-// @flow
-import * as React from 'react';
+import * as React from "react";
 import {
   RiGithubFill,
   RiLinkedinFill,
   RiTwitterFill,
-  RiInstagramFill
+  RiInstagramFill,
+  RiExternalLinkLine,
 } from "react-icons/ri";
-import {HiDocumentDownload} from "react-icons/hi";
+import { HiDocumentDownload } from "react-icons/hi";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
-import { Roboto_Mono } from 'next/font/google'
+import { Roboto_Mono } from "next/font/google";
+import { ContactForm } from "@/app/components/contactForm";
+
 const roboto = Roboto_Mono({
-  weight: ['400'],
-  subsets: ['greek'],
-})
+  weight: ["400"],
+  subsets: ["greek"],
+});
+
 export function Footer() {
   return (
     <>
-      <div className={'w-full h-[14rem] mt-2 md:mt-16 overflow-hidden'}>
-        <div className={'w-full flex flex-col justify-center bg-violet mt-16'}>
-          <div className={'w-full bg-violet-dark py-5 border-b-2 border-t-2 border-sky2 -rotate-3'}>
-            <Marquee>
-              <div className={"w-full flex-row flex justify-evenly items-center gap-5 px-2.5"}>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
-                <span className={roboto.className + " font-normal text-md"}>Get in Touch</span>
-                <div className={'w-2 h-2 rounded-full bg-sky'}></div>
+      <div className={"mt-2 h-[14rem] w-full overflow-hidden md:mt-16"}>
+        <div className={"mt-16 flex w-full flex-col justify-center bg-violet"}>
+          <div
+            className={
+              "w-full -rotate-3 border-b-2 border-t-2 border-sky2 bg-violet-dark py-5"
+            }
+          >
+            <Marquee speed={15}>
+              <div
+                className={
+                  "flex w-full flex-row items-center justify-evenly gap-5 px-2.5"
+                }
+              >
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
+                <span className={roboto.className + " text-md font-normal"}>
+                  Get in Touch
+                </span>
+                <div className={"h-2 w-2 rounded-full bg-sky"}></div>
               </div>
             </Marquee>
           </div>
         </div>
       </div>
-
-      <div className={"container flex flex-col justify-between items-center mx-auto pt-10 gap-3"}>
-
-
-        <span className={"mx-auto font-extrabold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-purple to-sky"}>Areeb ur Rub</span>
-        <p className={"text-md text-center opacity-70 font-normal max-w-lg"}>
-          Passionate web developer and graphic designer learning web3 with Solidity. Passionate about creating intuitive and user-friendly experiences and bringing visual designs to life.
-        </p>
-        <div className={"flex-row items-center justify-between gap-5 px-2 py-4 text-violet-50 opacity-70 flex border-t-2 border-purple w-full mt-5"}>
-          <span className={''}>
-            © 2023 Areeb ur Rub Portfolio. All Rights Reserved.
+      <div
+        className={
+          "container mx-auto flex w-full flex-col items-start justify-center gap-5 lg:flex-row-reverse"
+        }
+      >
+        <div
+          className={
+            "container mx-auto flex w-full flex-col items-center justify-center"
+          }
+        >
+          <ContactForm />
+        </div>
+        <div
+          className={
+            "container mx-auto flex w-full flex-col items-center justify-center lg:items-start"
+          }
+        >
+          <span
+            className={
+              "bg-gradient-to-r from-purple to-sky bg-clip-text text-4xl font-extrabold text-transparent"
+            }
+          >
+            Areeb ur Rub
           </span>
-          <div className={"flex-row items-center gap-5 text-2xl flex"}>
-            <Link href={"#"}>
-              <RiGithubFill/>
+          <p
+            className={
+              "text-md max-w-lg text-center font-normal opacity-70 lg:text-left"
+            }
+          >
+            Passionate web developer and graphic designer learning web3 with
+            Solidity. Passionate about creating intuitive and user-friendly
+            experiences and bringing visual designs to life.
+          </p>
+          {/* Add Footer Links */}
+          <div
+            className={
+              "mt-5 flex flex-row items-center justify-center gap-5 text-2xl text-sky2"
+            }
+          >
+            <Link href={"#"} title={"Github"}>
+              <RiGithubFill />
             </Link>
-            <Link href={"#"}>
-              <RiLinkedinFill/>
+            <Link href={"#"} title={"LinkedIn"}>
+              <RiLinkedinFill />
             </Link>
-            <Link href={"#"}>
-              <RiTwitterFill/>
+            <Link href={"#"} title={"Twitter"}>
+              <RiTwitterFill />
+            </Link>
+            <Link href={"#"} title={"Instagram"}>
+              <RiInstagramFill />
+            </Link>
+            <Link href={"#"} title={"Download Resume"}>
+              <HiDocumentDownload />
             </Link>
           </div>
+          <div className={"mt-10 flex flex-row items-start justify-between"}>
+            <div
+              className={
+                "flex flex-col items-center gap-3 font-extralight lg:items-start"
+              }
+            >
+              <span className={"font-bold text-purple"}>More Links</span>
+              <Link href={"#"} className={"hover:underline"}>
+                Detain or Not (Attendance Tracker)
+              </Link>
+              <Link href={"#"} className={"hover:underline"}>
+                Live Chat Extension
+              </Link>
+              <Link href={"#"} className={"hover:underline"}>
+                When Where What
+              </Link>
+              <Link href={"#"} className={"hover:underline"}>
+                Electronic Projects (YouTube Channel)
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className={
+          "container mx-auto flex flex-col items-center justify-between gap-3 pt-10"
+        }
+      >
+        <div
+          className={
+            "mt-5 flex w-full flex-col items-center justify-between gap-5 border-t-2 border-purple px-2 py-4 text-center text-violet-50 opacity-70 md:flex-row"
+          }
+        >
+          <span className={""}>
+            © 2023 Areeb ur Rub Portfolio. All Rights Reserved.
+          </span>
+          <span className={"flex flex-row"}>
+            Built with NextJs and TailwindCSS, Code on &nbsp;
+            <Link
+              href={"https://github.com/areeburrub/areeburrub.dev"}
+              className={"flex flex-row text-purple underline"}
+            >
+              Github <RiExternalLinkLine />{" "}
+            </Link>
+            .
+          </span>
         </div>
       </div>
     </>
