@@ -66,7 +66,6 @@ export const ContactEmail = ({ name, message }: TemplateProps) => (
             <p className="-ml-2 mt-2 whitespace-pre-wrap rounded bg-gray-50 p-2 text-gray-700 text-muted">
               {message}
             </p>
-
             <p className="mt-2">
               I will get back to you as soon as possible.
               <br />
