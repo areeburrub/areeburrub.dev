@@ -32,7 +32,7 @@ export function Navbar() {
 
       <div
         className={`mt-5 md:mt-auto ${
-          mobileNavOpen ? "h-0" : "h-44"
+          mobileNavOpen ? "h-44" : "h-0"
         } flex w-full flex-col items-center gap-4 overflow-hidden transition-all duration-500 ease-in-out md:h-auto md:w-auto md:flex-row md:gap-10`}
       >
         <a href={"/"}>Home</a>
