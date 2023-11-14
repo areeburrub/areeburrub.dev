@@ -163,7 +163,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={"container grid w-full grid-cols-12 md:mt-10"}>
+      <div
+        className={"container grid w-full grid-cols-12 md:mt-10"}
+        id={"skillContainer"}
+      >
         <div
           className={
             "col-span-12 flex w-full flex-col items-start justify-center gap-2 md:col-span-6"
@@ -185,7 +188,7 @@ export default function Home() {
         </div>
         <div
           className={
-            "col-span-12 flex w-full flex-col items-center justify-center md:col-span-6"
+            "col-span-12 my-5 flex w-full flex-col items-center justify-center md:col-span-6"
           }
         >
           <SkillsAccordion />

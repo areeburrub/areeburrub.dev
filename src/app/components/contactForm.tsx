@@ -37,7 +37,6 @@ export function ContactForm() {
 
   const turnstileRef = useRef(null);
   const [captchaToken, setCaptchaToken] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   function resetCaptcha() {
     if (turnstileRef.current) {
@@ -58,36 +57,39 @@ export function ContactForm() {
 
     if (captchaToken) {
       try {
-        const response = await fetch("/api/send", {
+        const responsePromise = fetch("/api/send", {
           method: "POST",
           body: JSON.stringify({ ...values, captcha: captchaToken }),
           headers: {
             "Content-Type": "application/json",
           },
         });
-        if (response.ok) {
-          toast.success("I will get back to you soon!");
-        } else {
-          const error = await response.json();
-          console.log({ error });
-          toast.error("Something went wrong, please try again later");
-        }
+        toast.promise(responsePromise, {
+          loading: "Sending...",
+          success: (data) => {
+            form.reset();
+            return "Message sent successfully";
+          },
+          error: (error: any) => {
+            console.log({ error });
+            return "Something went wrong, please try again later";
+          },
+        });
       } catch (error: any) {
         toast.error(error?.message || "Something went wrong");
       } finally {
         setCaptchaToken(null);
         resetCaptcha();
-        setLoading(false);
       }
     } else {
       toast.error("Please verify that you are not a robot");
-      setLoading(false);
     }
   }
 
   return (
     <Form {...form}>
       <form
+        id={"contact"}
         onSubmit={form.handleSubmit(onSubmit)}
         className="w-full space-y-2 md:max-w-md"
       >

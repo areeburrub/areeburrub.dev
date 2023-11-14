@@ -12,6 +12,7 @@ import Marquee from "react-fast-marquee";
 
 import { Roboto_Mono } from "next/font/google";
 import { ContactForm } from "@/app/components/contactForm";
+import siteConfig from "@/site.config";
 
 const roboto = Roboto_Mono({
   weight: ["400"],
@@ -129,7 +130,7 @@ export function Footer() {
       </div>
       <div
         className={
-          "container mx-auto flex w-full flex-col items-start justify-center gap-5 lg:flex-row-reverse"
+          "container mx-auto flex w-full flex-col-reverse items-start justify-center gap-5 gap-8 lg:flex-row-reverse"
         }
       >
         <div
@@ -166,39 +167,54 @@ export function Footer() {
               "mt-5 flex flex-row items-center justify-center gap-5 text-2xl text-sky2"
             }
           >
-            <Link href={"#"} title={"Github"}>
+            <Link href={siteConfig.social.github} title={"Github"}>
               <RiGithubFill />
             </Link>
-            <Link href={"#"} title={"LinkedIn"}>
+            <Link href={siteConfig.social.linkedin} title={"LinkedIn"}>
               <RiLinkedinFill />
             </Link>
-            <Link href={"#"} title={"Twitter"}>
+            <Link href={siteConfig.social.twitter} title={"Twitter"}>
               <RiTwitterFill />
             </Link>
-            <Link href={"#"} title={"Instagram"}>
+            <Link href={siteConfig.social.instagram} title={"Instagram"}>
               <RiInstagramFill />
             </Link>
-            <Link href={"#"} title={"Download Resume"}>
+            <Link href={siteConfig.resume} title={"Download Resume"}>
               <HiDocumentDownload />
             </Link>
           </div>
-          <div className={"mt-10 flex flex-row items-start justify-between"}>
+          <div
+            className={
+              "mt-10 hidden flex-row items-start justify-between lg:flex"
+            }
+          >
             <div
               className={
                 "flex flex-col items-center gap-3 font-extralight lg:items-start"
               }
             >
               <span className={"font-bold text-purple"}>More Links</span>
-              <Link href={"#"} className={"hover:underline"}>
+              <Link
+                href={"https://detain-or-not.vercel.app/"}
+                className={"hover:underline"}
+              >
                 Detain or Not (Attendance Tracker)
               </Link>
-              <Link href={"#"} className={"hover:underline"}>
+              <Link
+                href={
+                  "https://chrome.google.com/webstore/detail/live-chat-for-all-website/jndncpcadllfnlbdlmfdjfachfkjnmki"
+                }
+                className={"hover:underline"}
+              >
                 Live Chat Extension
               </Link>
-              <Link href={"#"} className={"hover:underline"}>
+              <Link href={"https://wh3.link"} className={"hover:underline"}>
                 When Where What
               </Link>
-              <Link href={"#"} className={"hover:underline"}>
+              <Link
+                href={"https://youtube.com/diyareeb"}
+                className={"hover:underline"}
+              >
                 Electronic Projects (YouTube Channel)
               </Link>
             </div>

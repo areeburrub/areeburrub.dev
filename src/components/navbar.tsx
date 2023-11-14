@@ -36,10 +36,10 @@ export function Navbar() {
         } flex w-full flex-col items-center gap-4 overflow-hidden transition-all duration-500 ease-in-out md:h-auto md:w-auto md:flex-row md:gap-10`}
       >
         <a href={"/"}>Home</a>
-        <a href={"/work"}>Work</a>
-        <a href={"/project"}>Project</a>
+        <a href={"#"}>Work</a>
+        <a href={"#"}>Project</a>
         <a
-          href={"#"}
+          href={"#contact"}
           className={
             "rounded-full border-2 border-sky bg-violet-dark px-5 py-2 text-sky hover:border-transparent hover:bg-sky hover:text-violet"
           }

@@ -25,20 +25,21 @@ const SkillsAccordion = () => {
   const designingRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(accordionRef.current, {
+    gsap.timeline({
       scrollTrigger: {
-        start: "-=700",
-        end: " +=400",
-        trigger: "#accordion",
-        endTrigger: "#endAccordion",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        // toggleActions: "restart pause reverse pause",
+        trigger: "#skillContainer",
         onUpdate: (self) => {
-          if (self.progress < 0.45 && self.progress > 0.25) {
+          if (self.progress < 0.25 && self.progress > 0.0) {
             setAccordion("programming");
-          } else if (self.progress < 0.65 && self.progress > 0.45) {
+          } else if (self.progress < 0.5 && self.progress > 0.25) {
             setAccordion("frameworks");
-          } else if (self.progress < 0.85 && self.progress > 0.65) {
+          } else if (self.progress < 0.75 && self.progress > 0.5) {
             setAccordion("database");
-          } else if (self.progress < 1 && self.progress > 0.85) {
+          } else if (self.progress < 1 && self.progress > 0.75) {
             setAccordion("designing");
           }
           console.log(

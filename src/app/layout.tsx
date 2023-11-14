@@ -3,6 +3,7 @@ import { Noto_Sans, Roboto_Mono } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { TailwindIndicator } from "@/components/ui/tailwindIndicator";
+import { Toaster } from "sonner";
 
 const noto = Noto_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster />
         <TailwindIndicator />
       </body>
     </html>
