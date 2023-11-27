@@ -53,70 +53,7 @@ const SkillsAccordion = () => {
   //       },
   //     },
   //   });
-    // gsap.from(frameworksRef.current, {
-    //   scrollTrigger: {
-    //     start : "top bottom",
-    //     end : " +=300",
-    //     trigger: "#frameworkStart",
-    //     endTrigger: "#frameworkEnd",
-    //     onToggle: (self) => {
-    //       self.isActive ? setAccordion("framework") : setAccordion("");
-    //     },
-    //     onUpdate: (self) => {
-    //       console.log(
-    //           "progress:",
-    //           self.progress.toFixed(3),
-    //           "direction:",
-    //           self.direction,
-    //           "velocity",
-    //           self.getVelocity()
-    //       );
-    //     },
-    //   },
-    // });
-    // gsap.from(databaseRef.current, {
-    //   scrollTrigger: {
-    //     start : "+=100",
-    //     end : " +=200",
-    //     trigger: "#databaseStart",
-    //     endTrigger: "#databaseEnd",
-    //     onToggle: (self) => {
-    //       self.isActive ? setAccordion("database") : setAccordion("");
-    //     },
-    //     onUpdate: (self) => {
-    //       console.log(
-    //           "progress:",
-    //           self.progress.toFixed(3),
-    //           "direction:",
-    //           self.direction,
-    //           "velocity",
-    //           self.getVelocity()
-    //       );
-    //     },
-    //   },
-    // });
-    // gsap.from(designingRef.current, {
-    //   scrollTrigger: {
-    //     start : "top top",
-    //     end : " +=100",
-    //     trigger: "#designingStart",
-    //     endTrigger: "#designingEnd",
-    //     onToggle: (self) => {
-    //       self.isActive ? setAccordion("designing") : setAccordion("");
-    //     },
-    //     onUpdate: (self) => {
-    //       console.log(
-    //           "progress:",
-    //           self.progress.toFixed(3),
-    //           "direction:",
-    //           self.direction,
-    //           "velocity",
-    //           self.getVelocity()
-    //       );
-    //     },
-    //   },
-    // });
-  }, []);
+  // }, []);
   return (
     <>
       <Accordion
