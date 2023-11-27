@@ -10,7 +10,7 @@ const siteConfig = {
   resume: "https://areeburrub.dev/Resume - Areeb ur Rub.pdf",
   social: {
     github: "https://github.com/areeburrub",
-    instagram: "https://www.instagram.com/areeburrub/",
+    instagram: "https://www.instagram.com/areeb.ur_rub/",
     linkedin: "https://www.linkedin.com/in/areeburrub/",
     twitter: "https://twitter.com/areeburrub",
   },
