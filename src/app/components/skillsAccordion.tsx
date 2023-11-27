@@ -24,35 +24,35 @@ const SkillsAccordion = () => {
   const databaseRef = useRef(null);
   const designingRef = useRef(null);
 
-  useEffect(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-        // toggleActions: "restart pause reverse pause",
-        trigger: "#skillContainer",
-        onUpdate: (self) => {
-          if (self.progress < 0.25 && self.progress > 0.0) {
-            setAccordion("programming");
-          } else if (self.progress < 0.5 && self.progress > 0.25) {
-            setAccordion("frameworks");
-          } else if (self.progress < 0.75 && self.progress > 0.5) {
-            setAccordion("database");
-          } else if (self.progress < 1 && self.progress > 0.75) {
-            setAccordion("designing");
-          }
-          console.log(
-            "progress:",
-            self.progress.toFixed(3),
-            "direction:",
-            self.direction,
-            "velocity",
-            self.getVelocity(),
-          );
-        },
-      },
-    });
+  // useEffect(() => {
+  //   gsap.timeline({
+  //     scrollTrigger: {
+  //       start: "top center",
+  //       end: "bottom center",
+  //       scrub: true,
+  //       // toggleActions: "restart pause reverse pause",
+  //       trigger: "#skillContainer",
+  //       onUpdate: (self) => {
+  //         if (self.progress < 0.25 && self.progress > 0.0) {
+  //           setAccordion("programming");
+  //         } else if (self.progress < 0.5 && self.progress > 0.25) {
+  //           setAccordion("frameworks");
+  //         } else if (self.progress < 0.75 && self.progress > 0.5) {
+  //           setAccordion("database");
+  //         } else if (self.progress < 1 && self.progress > 0.75) {
+  //           setAccordion("designing");
+  //         }
+  //         console.log(
+  //           "progress:",
+  //           self.progress.toFixed(3),
+  //           "direction:",
+  //           self.direction,
+  //           "velocity",
+  //           self.getVelocity(),
+  //         );
+  //       },
+  //     },
+  //   });
     // gsap.from(frameworksRef.current, {
     //   scrollTrigger: {
     //     start : "top bottom",
