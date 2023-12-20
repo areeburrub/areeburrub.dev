@@ -4,7 +4,7 @@ const siteConfig = {
   description:
     "I'm a web developer and designer, I create beautiful and responsive websites and web applications.",
   logo: "https://areeburrub.dev/images/logo.png",
-  heroImage: "https://areeburrub.dev/images/hero-image.JPG",
+  heroImage: "https://areeburrub.dev/images/hero-image.jpg",
   email: "contact@areeburrub.dev",
   websiteURL: "https://areeburrub.dev",
   resume: "https://areeburrub.dev/Resume - Areeb ur Rub.pdf",
