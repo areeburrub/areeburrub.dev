@@ -274,12 +274,12 @@ export default function Home() {
       >
         <ProjectCard
           project={{
-            title: "AI JSON Generator",
+            title: "Lumoflo (WIP)",
             description:
-              "AI JSON Generator is a web app that allows you to generate JSON data for your projects.It uses OpenAI's GPT-3 to generate JSON data based on your inputs.",
-            image: "/project/ai-json-generator.png",
-            url: "https://wh3.link/",
-            tags: ["Tailwind", "Next Js", "Mongo DB"],
+              "Lumoflo simplifies the complexities of Instagram selling by offering sellers a unified platform for managing orders, logistics, payments, and more. It empowers sellers with an intuitive interface and powerful features tailored for Instagram sales.",
+            image: "/project/lumoflo.png",
+            url: "https://lumoflo.com",
+            tags: ["Tailwind", "Next Js 13", "Prisma"],
           }}
         />
         <ProjectCard
