@@ -30,7 +30,7 @@ const ProjectCard = ({project}:ProjectCardProps) => {
             ))
           }
         </div>
-        <a href={'#'}>
+        <a href={project.url}>
           <Image
             height={800}
             width={1000}
@@ -39,7 +39,7 @@ const ProjectCard = ({project}:ProjectCardProps) => {
             alt={project.title}/>
         </a>
       </div>
-      <Link href={"#"}>
+      <Link href={project.url}>
         <h3 className={'text-2xl font-semibold'}>
           {project.title}
         </h3>
