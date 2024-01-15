@@ -232,7 +232,7 @@ export function Footer() {
           }
         >
           <span className={""}>
-            © 2023 Areeb ur Rub Portfolio. All Rights Reserved.
+            © {new Date().getFullYear()} Areeb ur Rub Portfolio. All Rights Reserved.
           </span>
           <span className={"flex flex-row"}>
             Built with NextJs and TailwindCSS, Code on &nbsp;
