@@ -36,8 +36,8 @@ export function Navbar() {
         } flex w-full flex-col items-center gap-4 overflow-hidden transition-all duration-500 ease-in-out md:h-auto md:w-auto md:flex-row md:gap-10`}
       >
         <a href={"/"}>Home</a>
-        <a href={"#"}>Work</a>
-        <a href={"#"}>Project</a>
+        {/* <a href={"#"}>Work</a> */}
+        <a href={"#projects"}>Project</a>
         <a
           href={"#contact"}
           className={
