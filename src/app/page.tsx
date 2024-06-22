@@ -268,6 +268,7 @@ export default function Home() {
         </div>
       </Marquee>
       <div
+      id="projects"
         className={
           "container grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         }
@@ -288,7 +289,7 @@ export default function Home() {
             description:
               "When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple and easy to use web app that allows you to create events and share them with your friends and family.",
             image: "/project/wh3-cover-img.jpg",
-            url: "https://wh3.link/",
+            url: "https://whenwherewhat.vercel.app/",
             tags: ["Tailwind", "Next Js", "Mongo DB"],
           }}
         />
@@ -298,7 +299,7 @@ export default function Home() {
             description:
               "Live Chat is a Chrome Extension that enable a user to chat with other people on same website it uses Chrome Extension API to check the URL of the website and matches them with each other.",
             image: "/project/live-ext.webp",
-            url: "https://wh3.link/",
+            url: "https://chromewebstore.google.com/detail/live-chat-for-all-website/jndncpcadllfnlbdlmfdjfachfkjnmki?hl=en",
             tags: ["Firebase", "Chrome Extension", "Figma"],
           }}
         />
