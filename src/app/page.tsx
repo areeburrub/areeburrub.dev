@@ -275,12 +275,12 @@ export default function Home() {
       >
         <ProjectCard
           project={{
-            title: "Lumoflo (WIP)",
+            title: "Spaceship CMS (WIP)",
             description:
-              "Lumoflo simplifies the complexities of Instagram selling by offering sellers a unified platform for managing orders, logistics, payments, and more. It empowers sellers with an intuitive interface and powerful features tailored for Instagram sales.",
-            image: "/project/lumoflo.png",
-            url: "https://lumoflo.com",
-            tags: ["Tailwind", "Next Js 13", "Prisma"],
+              "Spaceship CMS simplifies MDX content management for Astro websites by integrating with GitHub. Its user-friendly interface and collaborative features streamline content creation, editing, and publishing, enhancing workflow efficiency and project management.",
+            image: "/project/spaceship-cms.png",
+            url: "https://spaceship-cms.co",
+            tags: ["Tailwind", "Next Js", "Github API"],
           }}
         />
         <ProjectCard
