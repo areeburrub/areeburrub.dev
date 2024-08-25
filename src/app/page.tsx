@@ -57,7 +57,7 @@ export default function Home() {
               }
             >
               <HiDocumentDownload />
-              Download CV
+              Download Resume
             </a>
             <Link href={siteConfig.social.github}>
               <RiGithubFill />
@@ -181,9 +181,8 @@ export default function Home() {
             I am passionate about learning and leveraging technology. I have
             honed my skills in creating websites and applications using React,
             Next JS, Flask, and Tailwind CSS. Currently, I&apos;m delving into
-            the exciting realms of web3 and Solidity for decentralized app
-            development, while also nurturing my interests in machine learning
-            and Android.
+            the exciting realms of system design perspective of any application
+            and studying about how scalable system are designed.
           </p>
         </div>
         <div
